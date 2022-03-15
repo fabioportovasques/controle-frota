@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body{
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  
+   
+    
+}
+.container div{
+    margin: 10px;
+    padding: 1px;
+    background-color: #ffffff;
+    width: 500px;
+    
+
+}
+
+.texto1{
+    font-size: 18px;
+    font-weight: bold;
+    display: flex ;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    color: #005188;
+}
+
+.texto2{
+    font-size: 14px;
+    display: flex ;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    color: #e7cc24;
+}
+.texto3,.texto4{
+    font-size: 14px;
+    font-weight: bold;
+    display: flex ;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    flex: 1;
+    color: #005188;
+}
+
+
+.img-saveiro,.container{
+    background-color: #ffffff;
+}
+
+#logo,texto1{
+       
+    display: flex;
+    justify-content:center;
+ }
+
+ .img1{
+    display: flex;
+    justify-content:center;
+  
+    
+}
+
+.img2{
+    display: flex;
+    justify-content: center;
+}
+
+.img3{
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    color: #005188;
+    font-size: 18px;
+}
+
+#pesquisa{
+    font-size: 50px;
+}
+
+.div, hr{
+    display: flex;
+    justify-content: end;
+    border:1px solid black;
+    opacity: 0.12;
+}
+
+.bot{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.icones,.sub_item,.sub_item2{
+    flex-direction: row;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin: 10px;
+    
+    
+
+}
+.sub_item{
+    
+}
+.sub_item2{
+    display: flex;
+    justify-content: right;
+}
+
+label{
+
+    display: flex;
+    justify-content: left;
+    color: #005188;
+    opacity: 0.50;
+}
+  
+
+@media  (min-width:200px) and (max-width:900px) {
+
+    .texto1{
+        font-size: 14px;
+        font-weight: bold;
+        display: flex ;
+        justify-content: center;
+        font-family: 'Noto Serif', serif;
+        flex: 1;
+        color: #005188;
+    }
+
+    .texto2{
+        font-size: 16px;
+        display: flex ;
+        justify-content: center;
+        font-family: 'Noto Serif', serif;
+        flex: 1;
+        color: #e7cc24;
+    }
+
+    .texto3,.texto4{
+        font-size: 14px;
+        font-weight: bold;
+        display: flex ;
+        justify-content: center;
+        font-family: 'Noto Serif', serif;
+        flex: 1;
+        color: #005188;
+    }
+
+
+    .container div{
+        margin: 10px;
+        padding: 1px;
+        background-color: #ffffff;
+        flex: 1;
+        width: 300px;
+       
+       
+       
+    }
+
+    #logo{
+       
+       display: flex;
+       justify-content: center;
+    }
+
+    .img1{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img3{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        color: #005188;
+        font-size: 12px;
+    }
+
+    .bot{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       
+    }
+
+}
