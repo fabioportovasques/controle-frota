@@ -113,7 +113,7 @@
         <footer>
                 <div class="icones">
                     <div class="sub_item" >
-                        <a href="moto.php"><i class="fa fa-arrow-left" style="font-size: 30px;"></i></a>
+                        <a href="gol.php"><i class="fa fa-arrow-left" style="font-size: 30px;"></i></a>
                     </div>
                     <div class="sub_item2">
                         <a href="index.php"><i class="fa fa-house" style="font-size: 30px;"></i>

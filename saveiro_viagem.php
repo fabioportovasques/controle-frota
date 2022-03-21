@@ -65,15 +65,16 @@
         </div>
 
         <div class="form1">
-            <form action="" method="POST">
-            <label>KM SAÍDA</label>
+            <form action="controller/insert_viagem.php" method="POST">
+                <input type="hidden" name="saveiro" value="saveiro">
+                <label>KM SAÍDA</label>
                 <input class="form-control" type="text" readonly  placeholder="1222666" value="1222666"> <br />
                 <label>KM CHEGADA</label>
                 <input class="form-control" type="text" readonly  placeholder="1222670" value="1222670" > <br />
                 <label>MOTORISTA</label>
                 <input class="form-control" type="text" readonly  placeholder="Fábio Vasques" value="Fábio Vasques">
 
-            </form>
+            
 
         </div>
 
@@ -86,21 +87,23 @@
         </div>
 
         <div class="form1">
-            <form action="" method="POST">
+           
                 <label>KM SAÍDA</label>
-                <input class="form-control" type="text"  placeholder="KM SAÍDA"> <br />
+                <input class="form-control" name="km_saida" type="text"  placeholder="KM SAÍDA"> <br />
                 <label>KM CHEGADA</label>
-                <input class="form-control" type="text" placeholder="KM CHEGADA"> <br />
+                <input class="form-control" type="text" name="km_chegada" placeholder="KM CHEGADA"> <br />
                 <label>HÁRIO SAÍDA</label>
-                <input class="form-control" type="time" placeholder="HORÁRIO SAÍDA"><br />
+                <input class="form-control" type="time" name="hora_saida" placeholder="HORÁRIO SAÍDA"><br />
                 <label>HÁRIO CHEGADA</label>
-                <input class="form-control" type="time"  placeholder="HORÁRIO CHEGADA"> <br />
+                <input class="form-control" type="time" name="hora_chegada" placeholder="HORÁRIO CHEGADA"> <br />
                 <label> MOTORISTA</label>
-                <input class="form-control" type="text" placeholder="NOME MOTORISTA"> <br />
+                <input class="form-control" type="text" name="motorista" placeholder="NOME MOTORISTA"> <br />
                <label> DATA SAÍDA</label>
-                <input class="form-control" type="date" placeholder="DATA"><br />
+                <input class="form-control" type="date" name="data_saida" placeholder="DATA"><br />
+                <label> DATA CHEGADA</label>
+                <input class="form-control" type="date" name="data_chegada" placeholder="DATA"><br />
                <label> DESTINO</label>
-                <input class="form-control" type="text" placeholder="DESTINO"><br />
+                <input class="form-control" type="text" name="destino" placeholder="DESTINO"><br />
 
         </div>
 
@@ -113,7 +116,7 @@
         <footer>
                 <div class="icones">
                     <div class="sub_item" >
-                        <a href="moto.php"><i class="fa fa-arrow-left" style="font-size: 30px;"></i></a>
+                        <a href="saveiro.php"><i class="fa fa-arrow-left" style="font-size: 30px;"></i></a>
                     </div>
                     <div class="sub_item2">
                         <a href="index.php"><i class="fa fa-house" style="font-size: 30px;"></i>

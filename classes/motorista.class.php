@@ -1,0 +1,12 @@
+<?php 
+
+    require 'config.php';
+
+    
+
+
+
+
+?>
+
+
