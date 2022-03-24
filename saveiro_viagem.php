@@ -84,22 +84,30 @@
 
         <div class="form1">
             <form action="controller/insert_viagem.php" method="POST">
-            <?php foreach ($lista as $item){
+            
 
-                ?>
+            <?php 
+
+            $saveiro = new Saveiro();
+
+            $lista = $saveiro->getviagem();
+            foreach ($lista as $item):
+
+            ?>
+
+            <?php endforeach; ?>
+
+            
 
                 <input type="hidden" name="saveiro" value="saveiro">
                 <label>KM SAÍDA</label>
-                <input class="form-control" type="text" readonly  placeholder="1222666" value="<?php echo $item['placa_veiculo']; ?>"> <br />
+                <input class="form-control" type="text" readonly  placeholder="1222666" value="<?php echo $item['km_saida']; ?>"> <br />
                 <label>KM CHEGADA</label>
                 <input class="form-control" type="text" readonly  placeholder="1222670" value="1222670" > <br />
                 <label>MOTORISTA</label>
-                <input class="form-control" type="text" readonly  placeholder="Fábio Vasques" value="Fábio Vasques">
+                <input class="form-control" type="text" readonly  placeholder="" value="<?php echo $item['motorista']; ?>">
 
-            <?php 
-                 }
-
-             ?>
+            
 
         </div>
 

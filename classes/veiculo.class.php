@@ -77,6 +77,20 @@ class Saveiro {
   }
 
 
+  public function getviagem() {
+
+    return $this->pdo->query("
+    select * FROM
+    veiculo AS v
+    JOIN viagem AS vi  on v.id_veiculo = vi.veiculo_id_veiculo
+    where placa_veiculo = '".$_POST['pesquisar_placa']."'  
+    order by hora_chegada desc;
+
+
+    ")
+        ->fetchAll();	
+    
+  }
 
 
 
