@@ -102,11 +102,13 @@
                 <input type="hidden" name="tipo_veiculo_idtipo_veiculo" value="<?php echo $item['tipo_veiculo_idtipo_veiculo']; ?>">
                 <input type="hidden" name="veiculo_id_veiculo" value="<?php echo $item['veiculo_id_veiculo']; ?>">
                 <label>KM SAÍDA</label>
-                <input class="form-control" type="text" readonly  placeholder="1222666" value="<?php echo $item['km_saida']; ?>"> <br />
+                <input class="form-control" type="text" readonly  placeholder="Ainda não há dados" value="<?php echo $item['km_saida']; ?>"> <br />
                 <label>KM CHEGADA</label>
-                <input class="form-control" type="text" readonly  placeholder="1222670" value="<?php echo $item['km_chegada']; ?>" > <br />
+                <input class="form-control" type="text" readonly  placeholder="Ainda não há dados" value="<?php echo $item['km_chegada']; ?>" > <br />
                 <label>MOTORISTA</label>
-                <input class="form-control" type="text" readonly  placeholder="" value="<?php echo $item['motorista']; ?>">
+                <input class="form-control" type="text" readonly  placeholder="Ainda não há dados" value="<?php echo $item['motorista']; ?>"><br />
+                <label>ÚLTIMO DESTINO</label>
+                <input class="form-control" type="text" readonly  placeholder="Ainda não há dados" value="<?php echo $item['destino']; ?>">
 
             
 
@@ -117,7 +119,7 @@
         </div>
 
         <div class="texto4">        
-                Informações do Motorista
+                Viagem Atual
         </div>
 
         <div class="form1">
@@ -142,7 +144,7 @@
         </div>
 
         <div class="bot">    
-                <button type="submit" id="pesquisar" name="pesquisar" value="valida" class="btn btn-success bot">Entrar</button>
+                <button type="submit" id="pesquisar" name="pesquisar" value="valida" class="btn btn-success bot">ENVIAR DADOS</button>
 
 
                 </form>
