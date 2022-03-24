@@ -11,7 +11,8 @@ class Veiculo {
   
       //conexão banco de dados
   
-      $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030"
+      $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030",
+      array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
       );
   
 
@@ -59,7 +60,8 @@ class Saveiro {
     
         //conexão banco de dados
     
-        $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030"
+        $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030",
+        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
         );
     
   }

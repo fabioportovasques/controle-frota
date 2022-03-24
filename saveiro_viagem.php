@@ -22,9 +22,11 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Motos</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript" src="ajax.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+
     <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
 
-    <script type="text/javascript" src="ajax.js"></script>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/js/bootstrap.min.js" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='assets/css/style2.css'>
@@ -47,7 +49,29 @@
         font-weight: bold;
     }
 
+
+
 </style>
+
+
+
+<script type="text/javascript">
+
+/*
+
+$(function(){
+
+$('#teste').bind('click',function(e){
+    e.preventDefault();
+   
+});
+})
+
+*/
+
+</script>
+
+
 
 </head>
 <body>
@@ -144,9 +168,7 @@
         </div>
 
         <div class="bot">    
-                <button type="submit" id="pesquisar" name="pesquisar" value="valida" class="btn btn-success bot">ENVIAR DADOS</button>
-
-
+                <button type="submit" id="enviar" name="enviar"  class="btn btn-success bot">ENVIAR DADOS</button>
                 </form>
         </div>
 
@@ -168,6 +190,34 @@
     </div>
     <!--link  para icone-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <!--Modal pra Preencher KM_SAIDA-->
+
+ <div class="modal fade" id="alert-preencher-kmSaida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Campo Obrigatório!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+          <div>
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; Favor Prencher o campo de Senha
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!--Modal para Usuario com  Sucesso -->
 

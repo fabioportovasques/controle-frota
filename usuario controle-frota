@@ -1,0 +1,23 @@
+usuario sistema controle-frota defend
+
+mysql
+
+usuario: epiz_31368538
+senha: gtXzdC1rLSCg
+host:sql309.epizy.com 
+base de dados: epiz_31368538_controle_frota
+
+
+
+try {
+
+	$pdo = new PDO("mysql:dbname=epiz_31368538_controle_frota;host=sql309.epizy.com ","epiz_31368538","gtXzdC1rLSCg");
+
+} catch(PDOException $e) {
+	echo "ERRO: ".$e->getMessage();
+	exit;
+
+
+
+}
+

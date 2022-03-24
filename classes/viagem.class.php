@@ -25,7 +25,8 @@ class Viagem {
         
             //conexão banco de dados
         
-            $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030"
+            $this -> pdo = new PDO("mysql:dbname=controle_frota;host=localhost","root","F@bio102030",
+            array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
             );
         
             
@@ -33,7 +34,8 @@ class Viagem {
     }
 
 
-     public function adicionar($data_saida,$data_chegada,$hora_chegada,$hora_saida,$km_chegada,$km_saida,$destino,$motorista,$tipo_veiculo_idtipo_veiculo,$veiculo_id_veiculo){
+     public function adicionar($data_saida,$data_chegada,$hora_chegada,$hora_saida,$km_chegada,$km_saida,$destino,$motorista,
+     $tipo_veiculo_idtipo_veiculo,$veiculo_id_veiculo){
 
          $sql = $this->pdo->prepare("INSERT INTO viagem SET km_saida=:km_saida,km_chegada=:km_chegada,hora_chegada=:hora_chegada,
          hora_saida=:hora_saida,data_chegada=:data_chegada,data_saida=:data_saida,destino=:destino,motorista=:motorista,
@@ -54,8 +56,11 @@ class Viagem {
         $sql->bindParam(":veiculo_id_veiculo",$veiculo_id_veiculo);   
         $sql->execute();
 
-        echo "Cadastrado com sucesso!!!";
-    
+        print '<div class="alert alert-success" role="alert">
+            Cadastrado com sucesso
+      </div>';
+  print '<script>window.setTimeout(function(){window.location=\'../index.php\';}, 2000);</script>';
+
 
      }
 
