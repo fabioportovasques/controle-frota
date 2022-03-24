@@ -13,7 +13,7 @@
 	
 
 //include 'ajax/ajax-cad-viagem.php';
-include 'viagem.class.php';
+require '../classes/viagem.class.php';
 
 
 $viagem = new Viagem();

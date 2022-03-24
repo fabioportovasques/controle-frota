@@ -1,3 +1,18 @@
+<?php 
+
+    require 'classes/veiculo.class.php';
+
+    $veiculo = new Veiculo();
+
+    $lista = $veiculo->Pesquisar();
+    foreach ($lista as $item):
+
+?>
+<?php endforeach; ?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +24,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
 
+    <script type="text/javascript" src="ajax.js"></script>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/js/bootstrap.min.js" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='assets/css/style2.css'>
@@ -56,7 +72,7 @@
 
         <div class="texto2">
               <p>
-                  SAVEIRO: XXX-88IG
+                  SAVEIRO: <?php echo $item['placa_veiculo']; ?>
               </p>
       </div>
 
@@ -64,17 +80,26 @@
                 Ultima Viagem
         </div>
 
+       
+
         <div class="form1">
             <form action="controller/insert_viagem.php" method="POST">
+            <?php foreach ($lista as $item){
+
+                ?>
+
                 <input type="hidden" name="saveiro" value="saveiro">
                 <label>KM SAÍDA</label>
-                <input class="form-control" type="text" readonly  placeholder="1222666" value="1222666"> <br />
+                <input class="form-control" type="text" readonly  placeholder="1222666" value="<?php echo $item['placa_veiculo']; ?>"> <br />
                 <label>KM CHEGADA</label>
                 <input class="form-control" type="text" readonly  placeholder="1222670" value="1222670" > <br />
                 <label>MOTORISTA</label>
                 <input class="form-control" type="text" readonly  placeholder="Fábio Vasques" value="Fábio Vasques">
 
-            
+            <?php 
+                 }
+
+             ?>
 
         </div>
 
@@ -89,9 +114,9 @@
         <div class="form1">
            
                 <label>KM SAÍDA</label>
-                <input class="form-control" name="km_saida" type="text"  placeholder="KM SAÍDA"> <br />
+                <input class="form-control" name="km_saida" type="number"  placeholder="KM SAÍDA"> <br />
                 <label>KM CHEGADA</label>
-                <input class="form-control" type="text" name="km_chegada" placeholder="KM CHEGADA"> <br />
+                <input class="form-control" type="number" name="km_chegada" placeholder="KM CHEGADA"> <br />
                 <label>HÁRIO SAÍDA</label>
                 <input class="form-control" type="time" name="hora_saida" placeholder="HORÁRIO SAÍDA"><br />
                 <label>HÁRIO CHEGADA</label>
@@ -108,7 +133,8 @@
         </div>
 
         <div class="bot">    
-                <button type="submit" class="bot btn btn-success btn-md">CADASTRAR</button>
+                <button type="submit" id="pesquisar" name="pesquisar" value="valida" class="btn btn-success bot">Entrar</button>
+
 
                 </form>
         </div>
@@ -131,6 +157,34 @@
     </div>
     <!--link  para icone-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!--Modal para Usuario com  Sucesso -->
+
+ <div class="modal fade" id="success-alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-success d-flex align-items-center" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+          <div>
+          <p><i class="fas fa-check-circle"></i> &nbsp;&nbsp; &nbsp; Sejá bem vindo! </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 </body>

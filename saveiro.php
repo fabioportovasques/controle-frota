@@ -1,3 +1,16 @@
+<?php 
+
+require 'classes/veiculo.class.php';
+
+$saveiro = new Saveiro();
+
+$lista = $saveiro->getplacas();
+foreach ($lista as $item):
+
+?>
+<?php endforeach; ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,12 +74,18 @@
 
       <div class="pesquisa form-group">
            <form action="saveiro_viagem.php" method="POST">
-               <select class="pesquisa form-control">
-                   <option>XXX-TY655</option>
-                   <option>XXX-TY655</option>
-                   <option>XXX-TY655</option>
-                   <option>XXX-TY655</option>
-                   <option>XXX-TY655</option>
+               <select class="pesquisa form-control" name="pesquisar_placa">
+               <?php foreach ($lista as $item){
+
+                        ?>
+
+                   <option ><?php echo $item['placa_veiculo'];  ?> </option>
+                   
+               <?php 
+                }
+                ?>
+
+                  
                </select>
    
 
@@ -74,7 +93,7 @@
         </div>
 
         <div class="bot">
-        <button type="submit" class="btn btn-success bot">Continuar</button>
+        <button type="submit" class="btn btn-success bot" name="pesquisar">Continuar</button>
         
         </form>
         </div>
