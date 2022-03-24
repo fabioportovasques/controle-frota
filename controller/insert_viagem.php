@@ -26,9 +26,11 @@ $viagem = new Viagem();
 		$km_saida = $_POST['km_saida'];
 		$destino = $_POST['destino'];
         $motorista= $_POST['motorista'];
-		
+		$tipo_veiculo_idtipo_veiculo= $_POST['tipo_veiculo_idtipo_veiculo'];
+		$veiculo_id_veiculo = $_POST['veiculo_id_veiculo'];
 
-		$viagem ->adicionar($data_saida,$data_chegada,$hora_saida,$hora_chegada,$km_chegada,$km_saida,$destino,$motorista);
+		$viagem ->adicionar($data_saida,$data_chegada,$hora_saida,$hora_chegada,$km_chegada,$km_saida,$destino,$motorista,
+		$tipo_veiculo_idtipo_veiculo,$veiculo_id_veiculo);
 
 
 

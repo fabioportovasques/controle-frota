@@ -32,9 +32,15 @@ JOIN viagem AS vi  on v.id_veiculo = vi.veiculo_id_veiculo;
 
 
 /* funcionando query veiculo + viagem + ultima viagem */
-select * FROM
+select  max(data_chegada),data_chegada,data_saida,motorista,km_chegada,km_saida,
+hora_chegada,hora_saida,placa_veiculo,veiculo_id_veiculo,veiculo_id_veiculo, vi.tipo_veiculo_idtipo_veiculo
+FROM
 veiculo AS v
-JOIN viagem AS vi  on v.id_veiculo = vi.veiculo_id_veiculo;
+JOIN viagem AS vi  on v.id_veiculo = vi.veiculo_id_veiculo
+where placa_veiculo = "JQE7537"
+group by data_chegada,data_saida,motorista,km_chegada,km_saida,
+hora_chegada,hora_saida,placa_veiculo,veiculo_id_veiculo,vi.tipo_veiculo_idtipo_veiculo
+;
 
 /*consulta de placa */
 select * FROM

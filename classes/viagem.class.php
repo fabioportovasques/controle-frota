@@ -11,6 +11,10 @@ $km_chegada = $_POST['km_chegada'];
 $km_saida = $_POST['km_saida'];
 $destino = $_POST['destino'];
 $motorista= $_POST['motorista'];
+$tipo_veiculo_idtipo_veiculo= $_POST['tipo_veiculo_idtipo_veiculo'];
+$veiculo_id_veiculo = $_POST['veiculo_id_veiculo'];
+
+
 
 class Viagem {
 
@@ -29,10 +33,11 @@ class Viagem {
     }
 
 
-     public function adicionar($data_saida,$data_chegada,$hora_chegada,$hora_saida,$km_chegada,$km_saida,$destino,$motorista){
+     public function adicionar($data_saida,$data_chegada,$hora_chegada,$hora_saida,$km_chegada,$km_saida,$destino,$motorista,$tipo_veiculo_idtipo_veiculo,$veiculo_id_veiculo){
 
          $sql = $this->pdo->prepare("INSERT INTO viagem SET km_saida=:km_saida,km_chegada=:km_chegada,hora_chegada=:hora_chegada,
-         hora_saida=:hora_saida,data_chegada=:data_chegada,data_saida=:data_saida,destino=:destino,motorista=:motorista");
+         hora_saida=:hora_saida,data_chegada=:data_chegada,data_saida=:data_saida,destino=:destino,motorista=:motorista,
+         tipo_veiculo_idtipo_veiculo=:tipo_veiculo_idtipo_veiculo,veiculo_id_veiculo=:veiculo_id_veiculo");
 
         // $sql = $this->pdo->prepare("INSERT INTO viagem SET  motorista=:motorista");
 
@@ -44,7 +49,9 @@ class Viagem {
         $sql->bindParam(":km_chegada",$km_chegada);
         $sql->bindParam(":km_saida",$km_saida);
         $sql->bindParam(":destino",$destino);
-        $sql->bindParam(":motorista",$motorista);     
+        $sql->bindParam(":motorista",$motorista);  
+        $sql->bindParam(":tipo_veiculo_idtipo_veiculo",$tipo_veiculo_idtipo_veiculo);   
+        $sql->bindParam(":veiculo_id_veiculo",$veiculo_id_veiculo);   
         $sql->execute();
 
         echo "Cadastrado com sucesso!!!";
